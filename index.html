@@ -6,45 +6,44 @@
     <title>NexusFlow - Automatización Inteligente y Soluciones Digitales</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Paleta de colores ajustada -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        secondary: '#8b5cf6',
-                        dark: '#1e293b',
-                        light: '#f8fafc',
-                        accent: '#10b981'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary:   '#4f46e5', // Indigo-600
+              secondary: '#7c3aed', // Purple-600
+              dark:      '#111827', // Gray-900
+              light:     '#f3f4f6', // Gray-100
+              accent:    '#14b8a6'  // Teal-500
             }
+          }
         }
+      }
     </script>
+    <!-- Estilos actualizados: gradiente + patrón y fondo de iconos -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: #f3f4f6;
         }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        /* Fusiona gradiente y patrón en un solo fondo */
+        .gradient-bg.ai-pattern {
+            background-image:
+                linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%),
+                radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: cover, 20px 20px;
         }
-        
         .card-hover {
             transition: all 0.3s ease;
         }
-        
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+        /* Iconos con fondo semitransparente que resalta el color principal */
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -53,35 +52,24 @@
             justify-content: center;
             border-radius: 16px;
             margin-bottom: 1.5rem;
+            background-color: rgba(99, 70, 209, 0.2);
         }
-        
-        .testimonial-card {
-            position: relative;
-        }
-        
         .testimonial-card::before {
-            content: """;
+            content: "";
             position: absolute;
             top: -20px;
             left: 20px;
             font-size: 80px;
-            color: rgba(99, 102, 241, 0.1);
+            color: rgba(79, 70, 229, 0.1);
             font-family: serif;
             line-height: 1;
         }
-        
         .pricing-card:hover .pricing-header {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
             color: white;
         }
-        
         .glow {
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
-        }
-        
-        .ai-pattern {
-            background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
         }
     </style>
 </head>
@@ -94,22 +82,17 @@
                     <i class="fas fa-robot text-primary text-2xl mr-2"></i>
                     <span class="text-xl font-bold text-dark">Nexus<span class="text-primary">Flow</span></span>
                 </div>
-                
                 <nav class="hidden md:flex space-x-8">
                     <a href="#features" class="text-dark hover:text-primary font-medium">Servicios</a>
                     <a href="#solutions" class="text-dark hover:text-primary font-medium">Soluciones</a>
                     <a href="#pricing" class="text-dark hover:text-primary font-medium">Precios</a>
                     <a href="#testimonials" class="text-dark hover:text-primary font-medium">Clientes</a>
                 </nav>
-                
                 <div class="flex items-center space-x-4">
                     <a href="#" class="hidden md:inline-block text-dark hover:text-primary font-medium">Iniciar sesión</a>
                     <a href="#pricing" class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium transition duration-300">Empieza gratis</a>
                 </div>
-                
-                <button class="md:hidden text-dark">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+                <button class="md:hidden text-dark"><i class="fas fa-bars text-xl"></i></button>
             </div>
         </div>
     </header>
@@ -135,7 +118,7 @@
             </div>
             <div class="md:w-1/2 relative">
                 <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-1 inline-block">
-                    <img src="https://via.placeholder.com/600x400/6366f1/ffffff?text=NexusFlow+Dashboard" alt="Dashboard NexusFlow" class="rounded-xl shadow-2xl">
+                    <img src="https://via.placeholder.com/600x400/4f46e5/ffffff?text=NexusFlow+Dashboard" alt="Dashboard NexusFlow" class="rounded-xl shadow-2xl">
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-accent text-white px-4 py-2 rounded-lg shadow-lg">
                     <div class="flex items-center">
@@ -169,74 +152,44 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Potencia tu negocio con nuestras soluciones</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Desde automatización con IA hasta creación web profesional, tenemos todo lo que necesitas para destacar en la era digital.</p>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 - IA -->
+                <!-- Feature 1 -->
                 <div class="bg-light rounded-xl p-8 card-hover">
-                    <div class="feature-icon bg-primary bg-opacity-10 text-primary">
+                    <div class="feature-icon text-primary">
                         <i class="fas fa-brain text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Automatización con IA</h3>
                     <p class="text-gray-600 mb-4">Agentes inteligentes que aprenden y se adaptan a tus procesos empresariales para maximizar eficiencia.</p>
                     <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Bots conversacionales avanzados</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Automatización de flujos de trabajo</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Procesamiento inteligente de datos</span>
-                        </li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Bots conversacionales avanzados</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Automatización de flujos de trabajo</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Procesamiento inteligente de datos</span></li>
                     </ul>
                 </div>
-                
-                <!-- Feature 2 - Web -->
+                <!-- Feature 2 -->
                 <div class="bg-light rounded-xl p-8 card-hover">
-                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary">
+                    <div class="feature-icon text-secondary">
                         <i class="fas fa-globe text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Creación Web Profesional</h3>
                     <p class="text-gray-600 mb-4">Construye sitios web impresionantes sin código con nuestro editor visual y hosting de alto rendimiento.</p>
                     <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Editor drag-and-drop</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Optimización SEO integrada</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Plantillas profesionales</span>
-                        </li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Editor drag-and-drop</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Optimización SEO integrada</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Plantillas profesionales</span></li>
                     </ul>
                 </div>
-                
-                <!-- Feature 3 - Digital -->
+                <!-- Feature 3 -->
                 <div class="bg-light rounded-xl p-8 card-hover">
-                    <div class="feature-icon bg-accent bg-opacity-10 text-accent">
+                    <div class="feature-icon text-accent">
                         <i class="fas fa-chart-line text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Servicios Digitales</h3>
                     <p class="text-gray-600 mb-4">Todo lo que necesitas para operar y hacer crecer tu negocio en el mundo digital.</p>
                     <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Analítica avanzada</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Soluciones e-commerce</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-accent mr-2"></i>
-                            <span>Integraciones API</span>
-                        </li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Analítica avanzada</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Soluciones e-commerce</span></li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent mr-2"></i><span>Integraciones API</span></li>
                     </ul>
                 </div>
             </div>
@@ -251,7 +204,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Transformamos desafíos en resultados</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Casos reales de cómo nuestras soluciones han ayudado a empresas como la tuya.</p>
             </div>
-            
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
                     <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
@@ -262,14 +214,10 @@
                         <p class="text-gray-600 mb-4">Una reconocida marca de moda incrementó sus ventas online en un 210% con nuestra solución de e-commerce integrada con automatización de marketing.</p>
                         <div class="flex items-center">
                             <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="CEO" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-medium">Laura Martínez</p>
-                                <p class="text-sm text-gray-500">CEO, ModaFutura</p>
-                            </div>
+                            <div><p class="font-medium">Laura Martínez</p><p class="text-sm text-gray-500">CEO, ModaFutura</p></div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
                     <div class="h-48 bg-gradient-to-r from-accent to-secondary flex items-center justify-center">
                         <i class="fas fa-headset text-white text-6xl opacity-30"></i>
@@ -278,22 +226,12 @@
                         <h3 class="text-xl font-bold text-dark mb-3">Soporte Automatizado</h3>
                         <p class="text-gray-600 mb-4">Una empresa de telecomunicaciones redujo su tiempo de respuesta al cliente en un 85% implementando nuestros bots conversacionales con IA.</p>
                         <div class="flex items-center">
-                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="CTO" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-medium">Carlos Rodríguez</p>
-                                <p class="text-sm text-gray-500">CTO, TelcoPlus</p>
-                            </div>
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="CTO" class="w-12 h-12 rounded-full mr-4"><div><p class="font-medium">Carlos Rodríguez</p><p class="text-sm text-gray-500">CTO, TelcoPlus</p></div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center">
-                <a href="#" class="inline-flex items-center text-primary font-bold hover:text-secondary">
-                    Ver más casos de éxito
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+            <div class="text-center"><a href="#" class="inline-flex items-center text-primary font-bold hover:text-secondary">Ver más casos de éxito<i class="fas fa-arrow-right ml-2"></i></a></div>
         </div>
     </section>
 
@@ -305,316 +243,30 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Planes adaptados a cada necesidad</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Desde emprendedores hasta grandes empresas, tenemos la solución perfecta para ti.</p>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Free Plan -->
+                <!-- Starter Plan -->
                 <div class="bg-light rounded-xl overflow-hidden pricing-card">
                     <div class="p-8 pricing-header transition duration-300">
-                        <h3 class="text-xl font-bold text-dark mb-1">Starter</h3>
-                        <p class="text-gray-600 mb-4">Perfecto para comenzar</p>
-                        <div class="flex items-end mb-6">
-                            <span class="text-4xl font-bold">$0</span>
-                            <span class="text-gray-500 ml-1">/mes</span>
-                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-1">Starter</h3><p class="text-gray-600 mb-4">Perfecto para comenzar</p>
+                        <div class="flex items-end mb-6"><span class="text-4xl font-bold">$0</span><span class="text-gray-500 ml-1">/mes</span></div>
                         <a href="#" class="block w-full bg-white text-primary hover:bg-gray-100 text-center py-2 rounded-lg font-bold transition duration-300">Empezar gratis</a>
                     </div>
-                    <div class="p-8 pt-0">
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>1 agente de IA básico</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Sitio web con 5 páginas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>10,000 visitas/mes</span>
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i class="fas fa-times mr-3"></i>
-                                <span>Integraciones API</span>
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i class="fas fa-times mr-3"></i>
-                                <span>Soporte prioritario</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="p-8 pt-0"><ul class="space-y-3"><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>1 agente de IA básico</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Sitio web con 5 páginas</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>10,000 visitas/mes</span></li><li class="flex items-center text-gray-400"><i class="fas fa-times mr-3"></i><span>Integraciones API</span></li><li class="flex items-center text-gray-400"><i class="fas fa-times mr-3"></i><span>Soporte prioritario</span></li></ul></div>
                 </div>
-                
                 <!-- Pro Plan -->
                 <div class="bg-light rounded-xl overflow-hidden pricing-card relative">
                     <div class="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                    <div class="p-8 pricing-header transition duration-300">
-                        <h3 class="text-xl font-bold text-dark mb-1">Pro</h3>
-                        <p class="text-gray-600 mb-4">Para negocios en crecimiento</p>
-                        <div class="flex items-end mb-6">
-                            <span class="text-4xl font-bold">$49</span>
-                            <span class="text-gray-500 ml-1">/mes</span>
-                        </div>
+                    <div class="p-8 pricing-header transition duration-300"><h3 class="text-xl font-bold text-dark mb-1">Pro</h3><p class="text-gray-600 mb-4">Para negocios en crecimiento</p>
+                        <div class="flex items-end mb-6"><span class="text-4xl font-bold">$49</span><span class="text-gray-500 ml-1">/mes</span></div>
                         <a href="#" class="block w-full bg-primary hover:bg-secondary text-white text-center py-2 rounded-lg font-bold transition duration-300 glow">Prueba gratuita</a>
                     </div>
-                    <div class="p-8 pt-0">
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>5 agentes de IA avanzados</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Sitios web ilimitados</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>100,000 visitas/mes</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>10 integraciones API</span>
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i class="fas fa-times mr-3"></i>
-                                <span>Soporte prioritario</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="p-8 pt-0"><ul class="space-y-3"><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>5 agentes de IA avanzados</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Sitios web ilimitados</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>100,000 visitas/mes</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>10 integraciones API</span></li><li class="flex items-center text-gray-400"><i class="fas fa-times mr-3"></i><span>Soporte prioritario</span></li></ul></div>
                 </div>
-                
                 <!-- Enterprise Plan -->
                 <div class="bg-light rounded-xl overflow-hidden pricing-card">
-                    <div class="p-8 pricing-header transition duration-300">
-                        <h3 class="text-xl font-bold text-dark mb-1">Enterprise</h3>
-                        <p class="text-gray-600 mb-4">Para grandes empresas</p>
-                        <div class="flex items-end mb-6">
-                            <span class="text-4xl font-bold">$199</span>
-                            <span class="text-gray-500 ml-1">/mes</span>
-                        </div>
+                    <div class="p-8 pricing-header transition duration-300"><h3 class="text-xl font-bold text-dark mb-1">Enterprise</h3><p class="text-gray-600 mb-4">Para grandes empresas</p>
+                        <div class="flex items-end mb-6"><span class="text-4xl font-bold">$199</span><span class="text-gray-500 ml-1">/mes</span></div>
                         <a href="#" class="block w-full bg-white text-primary hover:bg-gray-100 text-center py-2 rounded-lg font-bold transition duration-300">Contactar ventas</a>
                     </div>
-                    <div class="p-8 pt-0">
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Agentes de IA ilimitados</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Sitios web ilimitados</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Visitas ilimitadas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Integraciones API ilimitadas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-accent mr-3"></i>
-                                <span>Soporte prioritario 24/7</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12 bg-gray-50 rounded-xl p-8 max-w-3xl mx-auto">
-                <h3 class="text-xl font-bold text-dark mb-4 text-center">¿Necesitas algo personalizado?</h3>
-                <p class="text-gray-600 mb-6 text-center">Nuestro equipo puede crear un plan a medida para las necesidades específicas de tu empresa.</p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-bold text-center transition duration-300">Hablar con un experto</a>
-                    <a href="#" class="bg-white border border-gray-300 hover:bg-gray-50 text-dark px-6 py-3 rounded-lg font-bold text-center transition duration-300">Comparar planes</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="p-8 pt-0"><ul class="space-y-3"><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Agentes de IA ilimitados</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Sitios web ilimitados</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Visitas ilimitadas</span></li><li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span>Integraciones API ilimitadas</span></li><li class="flex items
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-primary font-bold">TESTIMONIOS</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Lo que dicen nuestros clientes</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Empresas de todos los tamaños confían en NexusFlow para impulsar su transformación digital.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 testimonial-card shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="flex -space-x-2">
-                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client" class="w-10 h-10 rounded-full border-2 border-white">
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-bold">Ana López</p>
-                            <p class="text-sm text-gray-500">Directora de Marketing</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"Implementamos los bots conversacionales de NexusFlow y en 3 meses redujimos nuestro volumen de tickets de soporte en un 70%. La plataforma es increíblemente intuitiva."</p>
-                    <div class="mt-4 flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 testimonial-card shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="flex -space-x-2">
-                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Client" class="w-10 h-10 rounded-full border-2 border-white">
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-bold">Javier Ruiz</p>
-                            <p class="text-sm text-gray-500">CEO, StartupTech</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"Como startup con recursos limitados, NexusFlow nos permitió automatizar procesos clave y lanzar nuestro sitio web profesional en tiempo récord. ¡Invaluable!"</p>
-                    <div class="mt-4 flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 testimonial-card shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="flex -space-x-2">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-10 h-10 rounded-full border-2 border-white">
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-bold">María González</p>
-                            <p class="text-sm text-gray-500">Directora de TI</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"La solución de RPA de NexusFlow nos ahorra más de 200 horas mensuales en procesos manuales. El equipo de soporte es excepcional y siempre disponible."</p>
-                    <div class="mt-4 flex text-yellow-400">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="gradient-bg text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para transformar tu negocio?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">Únete a miles de empresas que ya están automatizando procesos, creando presencia web profesional y escalando sus operaciones con NexusFlow.</p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#pricing" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg glow transition duration-300">Empieza gratis hoy</a>
-                <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg font-bold text-lg transition duration-300">Ver demostración en vivo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-robot text-primary text-2xl mr-2"></i>
-                        <span class="text-xl font-bold">Nexus<span class="text-primary">Flow</span></span>
-                    </div>
-                    <p class="text-gray-400 mb-4">La plataforma todo-en-uno para automatización inteligente, creación web y soluciones digitales.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Producto</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Funciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Precios</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Integraciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Actualizaciones</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentación</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Guías</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Centro de ayuda</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre nosotros</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Carreras</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contacto</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Legal</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 NexusFlow. Todos los derechos reservados.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">Privacidad</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Términos</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Action Button -->
-    <div class="fixed bottom-6 right-6">
-        <button class="bg-primary hover:bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl glow transition duration-300">
-            <i class="fas fa-comment-dots text-xl"></i>
-        </button>
-    </div>
-
-    <script>
-        // Simple animation for demo purposes
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card-hover');
-            
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.classList.add('shadow-lg');
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.classList.remove('shadow-lg');
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if(targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
